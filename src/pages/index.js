@@ -252,7 +252,7 @@ export default function Home() {
           <div className="w-full overflow-hidden shadow-md p-10 text-white bg-midnight" style={{ borderRadius: '8px' }}>
 
             <div className="mb-10">
-              <SectionHeadline index={1}>Reinventing a deep neural network from scratch</SectionHeadline>
+              <SectionHeadline index={1}>Reinventing the deep neural network from scratch</SectionHeadline>
               <List>
                 <ListItem>Perceptrons</ListItem>
                 <ListItem>Why it's called "deep" learning and why it matters</ListItem>
@@ -268,7 +268,7 @@ export default function Home() {
             </div>
 
             <div className="mb-10">
-              <SectionHeadline index={2}>How the model learns on its own - the Back Propagation deep-dive</SectionHeadline>
+              <SectionHeadline index={2}>How the model learns on its own - Back Propagation algorithm deep-dive</SectionHeadline>
               <List>
                 <ListItem>The naive method</ListItem>
                 <ListItem>The big picture - back propagation vs the naive method</ListItem>
@@ -281,7 +281,7 @@ export default function Home() {
             </div>
 
             <div className="mb-10">
-              <SectionHeadline index={3}>How to make neural networks work in reality - intuitions behind neural network optimizations</SectionHeadline>
+              <SectionHeadline index={3}>How to make neural networks work in reality - intuition behind neural network optimizations</SectionHeadline>
               <List>
                 <ListItem>The Vanishing Gradient problem</ListItem>
                 <ListItem>Variations of gradient descent - Stochastic Gradient Descent and Mini-batch Gradient Descent</ListItem>
