@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './layout.css'
-import logo from "../images/logo/logo.svg"
+import logo from "../images/logo/deepintuitions-logo-1.svg"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginLeft: `2rem` }}>

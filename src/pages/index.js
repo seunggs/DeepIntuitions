@@ -257,9 +257,9 @@ export default function Home() {
                 <ListItem>Perceptrons</ListItem>
                 <ListItem>Why it's called "deep" learning and why it matters</ListItem>
                 <ListItem>Activation functions</ListItem>
-                <ListItem>Cost of flexibility - the overfitting problem</ListItem>
-                <ListItem>The mystery of Deep Learning - "overparameterization"</ListItem>
-                <ListItem>Deep neural netowrk as a universal function approximation</ListItem>
+                <ListItem>Cost of deep neural network's flexibility - the overfitting problem</ListItem>
+                <ListItem>Mystery of Deep Learning - "overparameterization"</ListItem>
+                <ListItem>Deep neural network as a Universal Function Approximator</ListItem>
                 <ListItem>Linear Algebra detour</ListItem>
                 <ListItem>The forward pass</ListItem>
                 <ListItem>Importantce of scalability in deep learning models</ListItem>
