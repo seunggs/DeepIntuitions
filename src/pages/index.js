@@ -37,6 +37,19 @@ const Number = ({ children, className = 'bg-grass' }) => {
   )
 }
 
+const SectionHeadline = ({ index, children }) => {
+  return (
+    <div className="mb-5">
+      <SubHeadline className="mb-2 aqua">Section {index}</SubHeadline>
+      <Headline size="sm" className="">{children}</Headline>
+    </div>
+  )
+}
+
+const List = ({ children }) => <ul className="text-white text-opacity-75 content list-disc pl-5">{children}</ul>
+
+const ListItem = ({ children }) => <li className="mb-2">{children}</li>
+
 export default function Home() {
   return (
     <Layout>
@@ -85,7 +98,7 @@ export default function Home() {
           order={2}
           heading="Prerequisites"
           content={<div>
-            <div className="mb-1">1 yr of coding experience</div>
+            <div className="mb-1">Few months of coding experience</div>
             <div>High school math</div>
           </div>}
         />
@@ -131,7 +144,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row items-center">
                 <Number className="green">2.</Number>
-                <p>At least 6 months of coding experience - you don’t need to know Python, but you should be willing to learn some Python outside of this course</p>
+                <p>Few months of coding experience - you don’t need to know Python, but you should be willing to learn some Python outside of this course</p>
               </div>
             </div>
           </div>
@@ -144,7 +157,7 @@ export default function Home() {
 
         <div className="col-span-7 justify-center">
           <div className="md:pr-16">
-            <div className="w-full overflow-hidden" style={{ borderRadius: '5px' }}>
+            <div className="w-full overflow-hidden shadow-md" style={{ borderRadius: '8px' }}>
               <img src={nn} style={{ width: '100%' }} />
             </div>
           </div>
@@ -162,7 +175,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row items-center mb-5">
                 <Number className="hot-pink">2.</Number>
-                <p>You’ll be well equipped to start exploring the cutting edge of AI and all the variations of Deep Learning like Convolutional Neural Nets for Computer Vision or Transformers for Natural Language Processing</p>
+                <p>You’ll be well equipped to start exploring the cutting edge of AI and all the variations of Deep Learning like Convolutional Neural Nets for Computer Vision or Transformer for Natural Language Processing</p>
               </div>
               <div className="flex flex-row items-center mb-5">
                 <Number className="rose">3.</Number>
@@ -216,7 +229,7 @@ export default function Home() {
 
         <div className="col-span-7 justify-center">
           <div className="md:pl-16">
-            <div className="w-full overflow-hidden" style={{ borderRadius: '5px' }}>
+            <div className="w-full overflow-hidden shadow-md" style={{ borderRadius: '8px' }}>
               <img src={loss_surface} style={{ width: '100%' }} />
             </div>
           </div>
@@ -224,6 +237,78 @@ export default function Home() {
         {/* end: section */}
 
       </div>
+
+      {/* syllabus */}
+      <div className="grid grid-cols-1 md:grid-cols-12 mt-24 items-start">
+
+        <div className="col-span-4 justify-center">
+          <div className="mb-16 md:pr-16">
+            <SubHeadline>Course overview</SubHeadline>
+            <Headline size="md">Syllabus</Headline>
+          </div>
+        </div>
+
+        <div className="col-span-8 justify-center">
+          <div className="w-full overflow-hidden shadow-md p-10 text-white bg-midnight" style={{ borderRadius: '8px' }}>
+
+            <div className="mb-10">
+              <SectionHeadline index={1}>Reinventing a deep neural network from scratch</SectionHeadline>
+              <List>
+                <ListItem>Perceptrons</ListItem>
+                <ListItem>Why it's called "deep" learning and why it matters</ListItem>
+                <ListItem>Activation functions</ListItem>
+                <ListItem>Cost of flexibility - the overfitting problem</ListItem>
+                <ListItem>The mystery of Deep Learning - "overparameterization"</ListItem>
+                <ListItem>Deep neural netowrk as a universal function approximation</ListItem>
+                <ListItem>Linear Algebra detour</ListItem>
+                <ListItem>The forward pass</ListItem>
+                <ListItem>Importantce of scalability in deep learning models</ListItem>
+                <ListItem>Emergent properties of complex systems and why deep neural network is a black box</ListItem>
+              </List>
+            </div>
+
+            <div className="mb-10">
+              <SectionHeadline index={2}>How the model learns on its own - the Back Propagation deep-dive</SectionHeadline>
+              <List>
+                <ListItem>The naive method</ListItem>
+                <ListItem>The big picture - back propagation vs the naive method</ListItem>
+                <ListItem>Calculus detour - intuitive understanding of the core math behind back propagation</ListItem>
+                <ListItem>Gradient descent</ListItem>
+                <ListItem>Function composition and the chain rule</ListItem>
+                <ListItem>Computational graphs in depth</ListItem>
+                <ListItem>Back propagation under the hood</ListItem>
+              </List>
+            </div>
+
+            <div className="mb-10">
+              <SectionHeadline index={3}>How to make neural networks work in reality - intuitions behind neural network optimizations</SectionHeadline>
+              <List>
+                <ListItem>The Vanishing Gradient problem</ListItem>
+                <ListItem>Variations of gradient descent - Stochastic Gradient Descent and Mini-batch Gradient Descent</ListItem>
+                <ListItem>Gradient descent optimizers - Momentum, RMSProp, and Adam Optimizer</ListItem>
+                <ListItem>Learning rate decay, input normalization and batch norm</ListItem>
+                <ListItem>One of the most fundamental problems in Deep Learning: overfitting problem - the big picture</ListItem>
+                <ListItem>Solutions for overfitting - early stopping, regularization, and drop out</ListItem>
+                <ListItem>Neural networks with multiple outputs - softmax and cross entropy loss</ListItem>
+                <ListItem>All about data - importance of what goes into neural networks</ListItem>
+              </List>
+            </div>
+
+            <div className="">
+              <SectionHeadline index={4}>Coding deep neural networks in PyTorch</SectionHeadline>
+              <List>
+                <ListItem>The basics - arrays, tensors, etc.</ListItem>
+                <ListItem>Build a simple neural network from scratch - math to code</ListItem>
+                <ListItem>Build the same neural network using PyTorch's nn module</ListItem>
+                <ListItem>Build a deep neural network to solve hand-written digit recognition problem using PyTorch</ListItem>
+              </List>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      {/* end: syllabus */}
 
 
     </Layout >
