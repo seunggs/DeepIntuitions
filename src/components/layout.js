@@ -15,7 +15,7 @@ export default function Layout({ children }) {
       <div className="container px-4 text-lg">
         <header className="flex flex-row items-center my-6">
           <Link to="/" className="flex-none">
-            <img src={logo} alt="Logo" style={{ width: '280px' }} />
+            <img src={logo} alt="Logo" style={{ width: '252px' }} />
           </Link>
 
           <div className="flex-grow">&nbsp;</div>
