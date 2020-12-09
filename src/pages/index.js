@@ -15,10 +15,10 @@ const Box = ({ order, heading, content }) => {
   return (
     <div className={`${orderClassName} col-span-3 justify-center`}>
       <div className={`shadow-md text-white p-5 ${orderBgColor}`} style={{ borderRadius: '10px' }}>
-        <div className="mb-2 uppercase text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.8)' }}>
+        <div className="mb-2 uppercase text-sm font-semibold text-white text-opacity-75">
           {heading}
         </div>
-        <div className="source-serif-pro">
+        <div className="source-serif-pro text-base">
           {content}
         </div>
       </div>
@@ -80,27 +80,27 @@ export default function Home() {
         <Box
           order={0}
           heading="Time commitment"
-          content={<div>
-            <div className="mb-1">3 months</div>
-            <div>~5-10 hrs/wk</div>
-          </div>}
+          content={<ul className="pl-5 list-disc">
+            <li className="mb-2">3 months</li>
+            <li>~5-10 hrs/wk</li>
+          </ul>}
         />
         <Box
           order={1}
           heading="Focus"
-          content={<div>
-            <div className="mb-1">Intuition & foundation</div>
-            <div className="mb-1">Math for deep learning</div>
-            <div>PyTorch</div>
-          </div>}
+          content={<ul className="pl-5 list-disc">
+            <li className="mb-2">Intuition & foundation</li>
+            <li className="mb-2">Math for deep learning</li>
+            <li>PyTorch</li>
+          </ul>}
         />
         <Box
           order={2}
           heading="Prerequisites"
-          content={<div>
-            <div className="mb-1">Few months of coding experience</div>
-            <div>High school math</div>
-          </div>}
+          content={<ul className="pl-5 list-disc">
+            <li className="mb-2">Few months of coding experience</li>
+            <li>High school math</li>
+          </ul>}
         />
 
       </div>
