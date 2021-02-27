@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import './layout.css'
 import logo from "../images/logo/deepintuitions-logo.svg"
 import Button from './Button'
-import { CHECKOUT_URL } from '../utils/constants'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginLeft: `2rem` }}>
@@ -26,7 +26,7 @@ export default function Layout({ children }) {
             <ListLink to="/about/">Videos</ListLink>
             <ListLink to="/contact/">Contact</ListLink>
           </ul> */}
-          <div className="hidden md:block"><Button priority="primary-outline" to="#enroll">Enroll now</Button></div>
+          <div className="hidden md:block"><Button priority="primary-outline" onClick={() => scrollTo('#enroll')}>Enroll now</Button></div>
         </header>
 
         <div className="lg:max-w-7xl mx-auto">{children}</div>

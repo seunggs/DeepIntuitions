@@ -7,8 +7,8 @@ import TextAccent from '../components/TextAccent'
 import MyVideo from '../components/MyVideo'
 import nn from '../images/deep-neural-network.jpg'
 import loss_surface from '../images/loss-surface.jpg'
-import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { CHECKOUT_URL } from '../utils/constants'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const Box = ({ order, heading, content }) => {
   const orderClassNameMap = ['md:col-start-2', '', '']
@@ -74,9 +74,7 @@ export default function Home() {
             <p className="mb-6">Slow down at the beginning to get the big picture - it's the fastest path to the state of the art in Deep Learning.</p>
           </div>
 
-          <AnchorLink to="#enroll">
-            <Button>Enroll now</Button>
-          </AnchorLink>
+          <Button onClick={() => scrollTo('#enroll')}>Enroll now</Button>
         </div>
 
         <div className="col-span-6 justify-center pt-12 md:pt-0">

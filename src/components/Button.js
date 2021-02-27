@@ -9,6 +9,7 @@ const Button = ({
   block = false,
   to,
   href,
+  onClick,
   children,
 }) => {
   const priorityMap = {
@@ -42,7 +43,7 @@ const Button = ({
   const ExternalLink = ({}) => <a href={href} target="_blank"><ButtonContent /></a>
 
   return (
-    <button type={type} className={`btn ${priorityClassName} ${sizeClassName} ${shapeClassName} ${block ? 'block w-full' : ''}`}>
+    <button type={type} onClick={onClick} className={`btn ${priorityClassName} ${sizeClassName} ${shapeClassName} ${block ? 'block w-full' : ''}`}>
       {to ? <InternalLink /> : href ? <ExternalLink /> : <ButtonContent />}
     </button>
   )
