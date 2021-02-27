@@ -8,6 +8,7 @@ import TextAccent from '../components/TextAccent'
 import nn from '../images/deep-neural-network.jpg'
 import loss_surface from '../images/loss-surface.jpg'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import { CHECKOUT_URL } from '../utils/constants'
 
 const Box = ({ order, heading, content }) => {
   const orderClassNameMap = ['col-start-2', '', '']
@@ -67,7 +68,7 @@ export default function Home() {
             <p className="mb-6">Slow down at the beginning to get the big picture - it's the fastest path to the state of the art in Deep Learning.</p>
           </div>
           <AnchorLink to="#enroll">
-            <Button>Enroll Now</Button>
+            <Button>Enroll now</Button>
           </AnchorLink>
         </div>
 
@@ -340,7 +341,7 @@ export default function Home() {
               <div className="mb-6">Start learning today.</div>
             </div>
 
-            <Button href="https://deepintuitions.teachable.com/purchase?product_id=2918374">Enroll</Button>
+            <Button href={CHECKOUT_URL}>Enroll now</Button>
           </div>
         </div>
 
