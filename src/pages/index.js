@@ -3,8 +3,11 @@ import ReactPlayer from 'react-player'
 import Layout from '../components/layout'
 import Headline from '../components/Headline'
 import SubHeadline from '../components/SubHeadline'
+import Button from '../components/Button'
+import TextAccent from '../components/TextAccent'
 import nn from '../images/deep-neural-network.jpg'
 import loss_surface from '../images/loss-surface.jpg'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 const Box = ({ order, heading, content }) => {
   const orderClassNameMap = ['col-start-2', '', '']
@@ -63,6 +66,9 @@ export default function Home() {
             <p className="mb-5">If you've been struggling to get an intuitive feel for Deep Neural Networks because of all the technical details, this course is for you.</p>
             <p className="mb-6">Slow down at the beginning to get the big picture - it's the fastest path to the state of the art in Deep Learning.</p>
           </div>
+          <AnchorLink to="#enroll">
+            <Button>Enroll Now</Button>
+          </AnchorLink>
         </div>
 
         <div className="col-span-6 justify-center">
@@ -171,7 +177,7 @@ export default function Home() {
             <div className="content">
               <div className="flex flex-row items-center mb-5">
                 <Number className="magenta">1.</Number>
-                <p>You will have an intuitive understanding about Deep Learning and its underlying mechanics</p>
+                <p>You will have an intuitive understanding of Deep Learning and its underlying mechanics</p>
               </div>
               <div className="flex flex-row items-center mb-5">
                 <Number className="hot-pink">2.</Number>
@@ -252,6 +258,18 @@ export default function Home() {
           <div className="w-full overflow-hidden shadow-md p-10 text-white bg-midnight" style={{ borderRadius: '8px' }}>
 
             <div className="mb-10">
+              <SectionHeadline index={0}>Deep learning - the big picture</SectionHeadline>
+              <List>
+                <ListItem>What is machine learning exactly?</ListItem>
+                <ListItem>Different types of machine learning: supervised, unsupervised, and reinforcement learning</ListItem>
+                <ListItem>Deep neural network as features and weights</ListItem>
+                <ListItem>Loss functions and training vs inference</ListItem>
+                <ListItem>Why deep learning is unintuitive and how to make it feel intuitive</ListItem>
+                <ListItem></ListItem>
+              </List>
+            </div>
+
+            <div className="mb-10">
               <SectionHeadline index={1}>Reinventing the deep neural network from scratch</SectionHeadline>
               <List>
                 <ListItem>Perceptrons</ListItem>
@@ -295,7 +313,7 @@ export default function Home() {
             </div>
 
             <div className="">
-              <SectionHeadline index={4}>Coding deep neural networks in PyTorch</SectionHeadline>
+              <SectionHeadline index={4}>Coding deep neural networks in PyTorch and PyTorch Lightening</SectionHeadline>
               <List>
                 <ListItem>The basics - arrays, tensors, etc.</ListItem>
                 <ListItem>Build a simple neural network from scratch - math to code</ListItem>
@@ -310,6 +328,34 @@ export default function Home() {
       </div>
       {/* end: syllabus */}
 
+      {/* enroll */}
+      <div id="enroll" className="grid grid-cols-1 md:grid-cols-12 mt-24 items-start">
+
+        <div className="col-span-6 justify-center">
+          <div className="mb-16 md:pr-16">
+            <Headline size="md"><span className="mr-4">🎉</span>Ready to get started?</Headline>
+            
+            <div className="text-xl text-gray-500 leading-normal">
+              <div className="mb-2">Get 4 months access for <span className="font-semibold">2 monthly payments of $197</span>.</div>
+              <div className="mb-6">Start learning today.</div>
+            </div>
+
+            <Button href="https://deepintuitions.teachable.com/purchase?product_id=2918374">Enroll</Button>
+          </div>
+        </div>
+
+        <div className="col-span-3 justify-center">
+          <TextAccent><Headline size="sm">Learn</Headline></TextAccent>
+          <div className="source-serif-pro text-gray-500 pl-5 pr-8" style={{ fontSize: '1.08rem' }}>Get an intuitive understanding of Deep Learning and its underlying mechanics. Learn to build a basic neural network with PyTorch.</div>
+        </div>
+
+        <div className="col-span-3 justify-center">
+          <TextAccent><Headline size="sm">Time commitment</Headline></TextAccent>
+          <div className="source-serif-pro text-gray-500 pl-5 pr-8" style={{ fontSize: '1.08rem' }}>On average, students spend ~5-10 hours/week for 3 months to complete this course.</div>
+        </div>
+
+      </div>
+      {/* end: enroll */}
 
     </Layout >
   )

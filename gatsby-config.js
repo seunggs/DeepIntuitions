@@ -26,5 +26,11 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -20
+      }
+    },
   ],
 }
