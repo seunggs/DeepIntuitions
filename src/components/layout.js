@@ -26,7 +26,7 @@ export default function Layout({ children }) {
             <ListLink to="/about/">Videos</ListLink>
             <ListLink to="/contact/">Contact</ListLink>
           </ul> */}
-          <div><Button priority="primary-outline" to="#enroll">Enroll now</Button></div>
+          <div className="hidden md:block"><Button priority="primary-outline" to="#enroll">Enroll now</Button></div>
         </header>
 
         <div className="lg:max-w-7xl mx-auto">{children}</div>

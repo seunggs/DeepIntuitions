@@ -1,23 +1,23 @@
 import React from 'react'
-import ReactPlayer from 'react-player'
 import Layout from '../components/layout'
 import Headline from '../components/Headline'
 import SubHeadline from '../components/SubHeadline'
 import Button from '../components/Button'
 import TextAccent from '../components/TextAccent'
+import MyVideo from '../components/MyVideo'
 import nn from '../images/deep-neural-network.jpg'
 import loss_surface from '../images/loss-surface.jpg'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { CHECKOUT_URL } from '../utils/constants'
 
 const Box = ({ order, heading, content }) => {
-  const orderClassNameMap = ['col-start-2', '', '']
+  const orderClassNameMap = ['md:col-start-2', '', '']
   const orderClassName = orderClassNameMap[order]
   const orderBgColorMap = ['bg-sky-blue', 'bg-blue', 'bg-purple']
   const orderBgColor = orderBgColorMap[order]
 
   return (
-    <div className={`${orderClassName} col-span-3 justify-center`}>
+    <div className={`${orderClassName} col-span-1 md:col-span-3 justify-center`}>
       <div className={`shadow-md text-white p-5 ${orderBgColor}`} style={{ borderRadius: '10px' }}>
         <div className="mb-2 uppercase text-sm font-semibold text-white text-opacity-75">
           {heading}
@@ -54,10 +54,16 @@ const List = ({ children }) => <ul className="text-white text-opacity-75 content
 
 const ListItem = ({ children }) => <li className="mb-2">{children}</li>
 
+const MyImage = ({ src }) => (
+  <div className="w-full overflow-hidden shadow-md" style={{ borderRadius: '8px' }}>
+    <img src={src} style={{ width: '100%' }} />
+  </div>
+)
+
 export default function Home() {
   return (
     <Layout>
-      <div className="grid grid-cols-1 md:grid-cols-12 mt-24 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-24 items-center">
 
         {/* hero */}
         <div className="col-span-6 md:pr-20 justify-center">
@@ -67,14 +73,15 @@ export default function Home() {
             <p className="mb-5">If you've been struggling to get an intuitive feel for Deep Neural Networks because of all the technical details, this course is for you.</p>
             <p className="mb-6">Slow down at the beginning to get the big picture - it's the fastest path to the state of the art in Deep Learning.</p>
           </div>
+
           <AnchorLink to="#enroll">
             <Button>Enroll now</Button>
           </AnchorLink>
         </div>
 
-        <div className="col-span-6 justify-center">
-          <div style={{ maxWidth: '100%', width: '640px', height: '360px', borderRadius: '5px', overflow: 'hidden' }}>
-            <ReactPlayer url='https://youtu.be/9LM4yA5YBwQ' />
+        <div className="col-span-6 justify-center pt-12 md:pt-0">
+          <div className="w-full rounded-md overflow-hidden">
+            <MyVideo url='https://youtu.be/9LM4yA5YBwQ' />
           </div>
         </div>
         {/* end: hero */}
@@ -82,7 +89,7 @@ export default function Home() {
       </div>
 
       {/* section */}
-      <div className="grid grid-cols-1 md:grid-cols-11 mt-24 items-center gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-11 mt-12 md:mt-24 items-center gap-6">
 
         <Box
           order={0}
@@ -113,46 +120,42 @@ export default function Home() {
       </div>
       {/* end: section */}
 
-      <div className="grid grid-cols-1 md:grid-cols-12 mt-24 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-24 items-center">
 
-        <div className="col-span-5 justify-center">
-          <div className="">
-            <SubHeadline>Target audience</SubHeadline>
-            <Headline size="md">Who is this course for?</Headline>
+        <div className="col-span-5 justify-center pb-12 md:pb-0">
+          <SubHeadline>Target audience</SubHeadline>
+          <Headline size="md">Who is this course for?</Headline>
 
-            <div className="content">
-              <div className="flex flex-row items-center mb-5">
-                <Number className="grass">1.</Number>
-                <p>People who are new to deep learning and find concepts confusing and unintuitive.</p>
-              </div>
-              <div className="flex flex-row items-center">
-                <Number className="green">2.</Number>
-                <p>People who’ve been exploring deep learning for some time, but don’t feel like it has really “clicked” yet.</p>
-              </div>
+          <div className="content">
+            <div className="flex flex-row items-center mb-5">
+              <Number className="grass">1.</Number>
+              <p>People who are new to deep learning and find concepts confusing and unintuitive.</p>
+            </div>
+            <div className="flex flex-row items-center">
+              <Number className="green">2.</Number>
+              <p>People who’ve been exploring deep learning for some time, but don’t feel like it has really “clicked” yet.</p>
             </div>
           </div>
         </div>
 
-        <div className="col-span-2 justify-center">
+        <div className="col-span-2 justify-center hidden md:block">
           <div className="flex justify-center">
             <div style={{ borderRight: '2px solid rgba(63,62,135,0.15)', transform: 'rotate(10deg)', width: '10px', height: '320px' }} />
           </div>
         </div>
 
         <div className="col-span-5 justify-center">
-          <div className="">
-            <SubHeadline>Prerequisites</SubHeadline>
-            <Headline size="md">What do you need before the course?</Headline>
+          <SubHeadline>Prerequisites</SubHeadline>
+          <Headline size="md">What do you need before the course?</Headline>
 
-            <div className="content">
-              <div className="flex flex-row items-center mb-5">
-                <Number className="grass">1.</Number>
-                <p>High school mathematics (but we will re-learn the important concepts in the course)</p>
-              </div>
-              <div className="flex flex-row items-center">
-                <Number className="green">2.</Number>
-                <p>Few months of coding experience - you don’t need to know Python, but you should be willing to learn some Python outside of this course</p>
-              </div>
+          <div className="content">
+            <div className="flex flex-row items-center mb-5">
+              <Number className="grass">1.</Number>
+              <p>High school mathematics (but we will re-learn the important concepts in the course)</p>
+            </div>
+            <div className="flex flex-row items-center">
+              <Number className="green">2.</Number>
+              <p>Few months of coding experience - you don’t need to know Python, but you should be willing to learn some Python outside of this course</p>
             </div>
           </div>
 
@@ -160,20 +163,22 @@ export default function Home() {
       </div>
 
 
-      <div className="grid grid-cols-1 md:grid-cols-12 mt-24 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-24 items-center">
 
-        <div className="col-span-7 justify-center">
+        <div className="col-span-1 md:col-span-7 justify-center hidden md:block">
           <div className="md:pr-16">
-            <div className="w-full overflow-hidden shadow-md" style={{ borderRadius: '8px' }}>
-              <img src={nn} style={{ width: '100%' }} />
-            </div>
+            <MyImage src={nn} />
           </div>
         </div>
 
-        <div className="col-span-5 justify-center">
-          <div className="mb-16">
+        <div className="col-span-1 md:col-span-5 justify-center">
+          <div className="">
             <SubHeadline>What you'll learn</SubHeadline>
             <Headline size="md">What will you know after taking this course?</Headline>
+
+            <div className="w-full md:hidden my-8">
+              <MyImage src={nn} />
+            </div>
 
             <div className="content">
               <div className="flex flex-row items-center mb-5">
@@ -198,12 +203,16 @@ export default function Home() {
 
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 mt-24 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-24 items-center">
 
-        <div className="col-span-5 justify-center">
-          <div className="mb-16">
+        <div className="col-span-1 md:col-span-5 justify-center">
+          <div className="">
             <SubHeadline>Course components</SubHeadline>
             <Headline size="md">What's included in the course?</Headline>
+
+            <div className="w-full md:hidden my-8">
+              <MyImage src={loss_surface} />
+            </div>
 
             <div className="content">
               <div className="flex flex-row items-center mb-5">
@@ -234,11 +243,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="col-span-7 justify-center">
+        <div className="col-span-1 md:col-span-7 justify-center hidden md:block">
           <div className="md:pl-16">
-            <div className="w-full overflow-hidden shadow-md" style={{ borderRadius: '8px' }}>
-              <img src={loss_surface} style={{ width: '100%' }} />
-            </div>
+            <MyImage src={loss_surface} />
           </div>
         </div>
         {/* end: section */}
@@ -246,10 +253,10 @@ export default function Home() {
       </div>
 
       {/* syllabus */}
-      <div className="grid grid-cols-1 md:grid-cols-12 mt-24 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-24 items-start">
 
         <div className="col-span-4 justify-center">
-          <div className="mb-16 md:pr-16">
+          <div className="mb-8 md:pr-16">
             <SubHeadline>Course overview</SubHeadline>
             <Headline size="md">Syllabus</Headline>
           </div>
@@ -330,12 +337,12 @@ export default function Home() {
       {/* end: syllabus */}
 
       {/* enroll */}
-      <div id="enroll" className="grid grid-cols-1 md:grid-cols-12 mt-24 items-start">
+      <div id="enroll" className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-24 items-start">
 
-        <div className="col-span-6 justify-center">
+        <div className="col-span-1 md:col-span-6 justify-center">
           <div className="mb-16 md:pr-16">
-            <Headline size="md"><span className="mr-4">🎉</span>Ready to get started?</Headline>
-            
+            <Headline size="md"><span className="mr-4 block md:inline-block">🎉</span>Ready to get started?</Headline>
+
             <div className="text-xl text-gray-500 leading-normal">
               <div className="mb-2">Get 4 months access for <span className="font-semibold">2 monthly payments of $197</span>.</div>
               <div className="mb-6">Start learning today.</div>
@@ -345,12 +352,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="col-span-3 justify-center">
+        <div className="col-span-1 md:col-span-3 justify-center mb-12 md:mb-0">
           <TextAccent><Headline size="sm">Learn</Headline></TextAccent>
           <div className="source-serif-pro text-gray-500 pl-5 pr-8" style={{ fontSize: '1.08rem' }}>Get an intuitive understanding of Deep Learning and its underlying mechanics. Learn to build a basic neural network with PyTorch.</div>
         </div>
 
-        <div className="col-span-3 justify-center">
+        <div className="col-span-1 md:col-span-3 justify-center">
           <TextAccent><Headline size="sm">Time commitment</Headline></TextAccent>
           <div className="source-serif-pro text-gray-500 pl-5 pr-8" style={{ fontSize: '1.08rem' }}>On average, students spend ~5-10 hours/week for 3 months to complete this course.</div>
         </div>
