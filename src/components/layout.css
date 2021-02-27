@@ -5,6 +5,7 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
+  scroll-behavior: smooth;
 }
 
 .content {
