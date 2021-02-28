@@ -324,7 +324,7 @@ export default function Home() {
                 <ListItem>The basics - arrays, tensors, etc.</ListItem>
                 <ListItem>Build a simple neural network from scratch - math to code</ListItem>
                 <ListItem>Build the same neural network using PyTorch's nn module</ListItem>
-                <ListItem>Build a deep neural network to solve hand-written digit recognition problem using PyTorch</ListItem>
+                <ListItem>Build a deep neural network to solve hand-written digit recognition problem using PyTorch and PyTorch Lightening</ListItem>
               </List>
             </div>
 
