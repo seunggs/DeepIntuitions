@@ -269,7 +269,8 @@ export default function Home() {
                 <ListItem>What is machine learning exactly?</ListItem>
                 <ListItem>Different types of machine learning: supervised, unsupervised, and reinforcement learning</ListItem>
                 <ListItem>Deep neural network as features and weights</ListItem>
-                <ListItem>Loss functions and training vs inference</ListItem>
+                <ListItem>Loss functions</ListItem>
+                <ListItem>Training vs inference</ListItem>
                 <ListItem>Why deep learning is unintuitive and how to make it feel intuitive</ListItem>
               </List>
             </div>
