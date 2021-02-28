@@ -271,7 +271,6 @@ export default function Home() {
                 <ListItem>Deep neural network as features and weights</ListItem>
                 <ListItem>Loss functions and training vs inference</ListItem>
                 <ListItem>Why deep learning is unintuitive and how to make it feel intuitive</ListItem>
-                <ListItem></ListItem>
               </List>
             </div>
 
