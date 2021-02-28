@@ -231,7 +231,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row items-center mb-5">
                 <Number className="tangerine">5.</Number>
-                <p>Build neural networks from scratch using PyTorch</p>
+                <p>Build neural networks from scratch using PyTorch and PyTorch Lightening</p>
               </div>
               <div className="flex flex-row items-center mb-5">
                 <Number className="yellow">6.</Number>
