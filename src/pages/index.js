@@ -103,7 +103,7 @@ export default function Home() {
           content={<ul className="pl-5 list-disc">
             <li className="mb-2">Intuition & foundation</li>
             <li className="mb-2">Math for deep learning</li>
-            <li>PyTorch</li>
+            <li>PyTorch + PyTorch Lightening</li>
           </ul>}
         />
         <Box
@@ -286,7 +286,7 @@ export default function Home() {
                 <ListItem>Deep neural network as a Universal Function Approximator</ListItem>
                 <ListItem>Linear Algebra detour</ListItem>
                 <ListItem>The forward pass</ListItem>
-                <ListItem>Importantce of scalability in deep learning models</ListItem>
+                <ListItem>Importance of scalability in deep learning models</ListItem>
                 <ListItem>Emergent properties of complex systems and why deep neural network is a black box</ListItem>
               </List>
             </div>
