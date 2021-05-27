@@ -68,5 +68,6 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Datasets
+# Notebook data and logs
 notebooks/data
+notebooks/tb_logs
