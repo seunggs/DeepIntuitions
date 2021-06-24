@@ -1,1 +1,1 @@
-export const CHECKOUT_URL = 'https://deepintuitions.teachable.com/purchase?product_id=2918374'
+export const CHECKOUT_URL = 'https://www.udemy.com/course/finally-get-deep-learning/'

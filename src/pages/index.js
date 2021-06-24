@@ -342,7 +342,7 @@ export default function Home() {
             <Headline size="md"><span className="mr-4 block md:inline-block">🎉</span>Ready to get started?</Headline>
 
             <div className="text-xl text-gray-500 leading-normal">
-              <div className="mb-2">Get 4 months access for <span className="font-semibold">2 monthly payments of $197</span>.</div>
+              <div className="mb-2">Forever access for <span className="font-semibold">$29.99</span>.</div>
               <div className="mb-6">Start learning today.</div>
             </div>
 
