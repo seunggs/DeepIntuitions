@@ -6,7 +6,9 @@ import Button from '../components/Button'
 import TextAccent from '../components/TextAccent'
 import MyVideo from '../components/MyVideo'
 import nn from '../images/deep-neural-network.jpg'
+import icon_play from '../images/icons/icon_play.png'
 import loss_surface from '../images/loss-surface.jpg'
+import udemy_cover from '../images/udemy_cover.jpg'
 import { CHECKOUT_URL } from '../utils/constants'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
@@ -18,7 +20,7 @@ const Box = ({ order, heading, content }) => {
 
   return (
     <div className={`${orderClassName} col-span-1 md:col-span-3 justify-center`}>
-      <div className={`shadow-md text-white p-5 ${orderBgColor}`} style={{ borderRadius: '10px' }}>
+      <div className={`shadow-md text-white p-5 ${orderBgColor}`} style={{ borderRadius: '5px' }}>
         <div className="mb-2 uppercase text-sm font-semibold text-white text-opacity-75">
           {heading}
         </div>
@@ -67,20 +69,23 @@ export default function Home() {
 
         {/* hero */}
         <div className="col-span-6 md:pr-20 justify-center">
-          <SubHeadline>For coders new to Deep Learning</SubHeadline>
-          <Headline>Get An Intuitive Understanding of Deep Learning</Headline>
+          <SubHeadline>Get An Intuitive Understanding of Deep Learning</SubHeadline>
+          <Headline>Finally "GET" Deep Learning</Headline>
           <div className="content">
-            <p className="mb-5">If you've been struggling to get an intuitive feel for Deep Neural Networks because of all the technical details, this course is for you.</p>
-            <p className="mb-6">Slow down at the beginning to get the big picture - it's the fastest path to the state of the art in Deep Learning.</p>
+            <p className="mb-5">Are you afraid of getting started with Deep Learning because it sounds too technical?</p>
+            <p className="mb-5">Have you been watching Deep Learning videos, but still don’t feel like you “get” it?</p>
+            <p className="mb-5">I’ve been there myself.</p>
+            <p className="mb-6">I built this course to save you many months of frustration trying to decipher Deep Learning. No other prep course needed - get started now.</p>
           </div>
 
           <Button onClick={() => scrollTo('#enroll')}>Enroll now</Button>
         </div>
 
         <div className="col-span-6 justify-center pt-12 md:pt-0">
-          <div className="w-full rounded-md overflow-hidden">
+          {/* <div className="w-full rounded-md overflow-hidden">
             <MyVideo url='https://youtu.be/9LM4yA5YBwQ' />
-          </div>
+          </div> */}
+          <a href={CHECKOUT_URL} target="_blank"><MyImage src={udemy_cover} /></a>
         </div>
         {/* end: hero */}
 
@@ -93,7 +98,7 @@ export default function Home() {
           order={0}
           heading="Time commitment"
           content={<ul className="pl-5 list-disc">
-            <li className="mb-2">3 months</li>
+            <li className="mb-2">1-3 months</li>
             <li>~5-10 hrs/wk</li>
           </ul>}
         />
@@ -110,7 +115,7 @@ export default function Home() {
           order={2}
           heading="Prerequisites"
           content={<ul className="pl-5 list-disc">
-            <li className="mb-2">Few months of coding experience</li>
+            <li className="mb-2">Basic Python knowledge</li>
             <li>High school math</li>
           </ul>}
         />
@@ -127,11 +132,11 @@ export default function Home() {
           <div className="content">
             <div className="flex flex-row items-center mb-5">
               <Number className="grass">1.</Number>
-              <p>People who are new to deep learning and find concepts confusing and unintuitive.</p>
+              <p>Students who want learn Deep Learning for the first time</p>
             </div>
             <div className="flex flex-row items-center">
               <Number className="green">2.</Number>
-              <p>People who’ve been exploring deep learning for some time, but don’t feel like it has really “clicked” yet.</p>
+              <p>Beginners who want to finally understand Deep Learning at an intuitive level</p>
             </div>
           </div>
         </div>
@@ -149,11 +154,11 @@ export default function Home() {
           <div className="content">
             <div className="flex flex-row items-center mb-5">
               <Number className="grass">1.</Number>
-              <p>High school mathematics (but we will re-learn the important concepts in the course)</p>
+              <p>Highschool math</p>
             </div>
             <div className="flex flex-row items-center">
               <Number className="green">2.</Number>
-              <p>Few months of coding experience - you don’t need to know Python, but you should be willing to learn some Python outside of this course</p>
+              <p>Basic Python or coding knowledge</p>
             </div>
           </div>
 
@@ -181,15 +186,15 @@ export default function Home() {
             <div className="content">
               <div className="flex flex-row items-center mb-5">
                 <Number className="magenta">1.</Number>
-                <p>You will have an intuitive understanding of Deep Learning and its underlying mechanics</p>
+                <p>Develop an intuitive understanding of Deep Learning.</p>
               </div>
               <div className="flex flex-row items-center mb-5">
                 <Number className="hot-pink">2.</Number>
-                <p>You’ll be well equipped to start exploring the cutting edge of AI and all the variations of Deep Learning like Convolutional Neural Nets for Computer Vision or Transformer for Natural Language Processing</p>
+                <p>You’ll be ready to explore the cutting edge of AI and more advanced neural networks like CNNs and Transformers</p>
               </div>
               <div className="flex flex-row items-center mb-5">
                 <Number className="rose">3.</Number>
-                <p>You will be able to understand what deep learning experts like Geoffrey Hinton and Ilya Sutskever are talking about in articles and interviews</p>
+                <p>You'll be able to understand what deep learning experts like Geoffrey Hinton and Andrej Karpathy are talking about in articles and interviews</p>
               </div>
               <div className="flex flex-row items-center">
                 <Number className="tangerine">4.</Number>
@@ -215,7 +220,7 @@ export default function Home() {
             <div className="content">
               <div className="flex flex-row items-center mb-5">
                 <Number className="magenta">1.</Number>
-                <p>Develop intuitive understanding of deep neural networks</p>
+                <p>Develop an intuitive understanding of deep neural networks</p>
               </div>
               <div className="flex flex-row items-center mb-5">
                 <Number className="hot-pink">2.</Number>
@@ -232,10 +237,6 @@ export default function Home() {
               <div className="flex flex-row items-center mb-5">
                 <Number className="tangerine">5.</Number>
                 <p>Build neural networks from scratch using PyTorch and PyTorch Lightening</p>
-              </div>
-              <div className="flex flex-row items-center mb-5">
-                <Number className="yellow">6.</Number>
-                <p>Email access to me for questions (based on my availability)</p>
               </div>
             </div>
           </div>
@@ -352,12 +353,12 @@ export default function Home() {
 
         <div className="col-span-1 md:col-span-3 justify-center mb-12 md:mb-0">
           <TextAccent><Headline size="sm">Learn</Headline></TextAccent>
-          <div className="source-serif-pro text-gray-500 pl-5 pr-8" style={{ fontSize: '1.08rem' }}>Get an intuitive understanding of Deep Learning and its underlying mechanics. Learn to build a basic neural network with PyTorch.</div>
+          <div className="source-serif-pro text-gray-500 pl-5 pr-8" style={{ fontSize: '1.08rem' }}>Get an intuitive understanding of Deep Learning and its underlying mechanics. Learn to build a neural network with PyTorch.</div>
         </div>
 
         <div className="col-span-1 md:col-span-3 justify-center">
           <TextAccent><Headline size="sm">Time commitment</Headline></TextAccent>
-          <div className="source-serif-pro text-gray-500 pl-5 pr-8" style={{ fontSize: '1.08rem' }}>On average, students spend ~5-10 hours/week for 3 months to complete this course.</div>
+          <div className="source-serif-pro text-gray-500 pl-5 pr-8" style={{ fontSize: '1.08rem' }}>On average, students spend 1-3 months to complete this course.</div>
         </div>
 
       </div>
