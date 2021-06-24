@@ -343,7 +343,7 @@ export default function Home() {
             <Headline size="md"><span className="mr-4 block md:inline-block">🎉</span>Ready to get started?</Headline>
 
             <div className="text-xl text-gray-500 leading-normal">
-              <div className="mb-2">Forever access for <span className="font-semibold">$29.99</span>.</div>
+              <div className="mb-2">Take the Udemy course now for <span className="font-semibold">$29.99</span>.</div>
               <div className="mb-6">Start learning today.</div>
             </div>
 
