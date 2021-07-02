@@ -1,1 +1,1 @@
-export const CHECKOUT_URL = 'https://www.udemy.com/course/finally-get-deep-learning/'
+export const CHECKOUT_URL = 'https://www.udemy.com/course/finally-get-deep-learning/?referralCode=1FA3FE5448D147118724'
